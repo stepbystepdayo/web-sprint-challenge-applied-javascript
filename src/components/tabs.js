@@ -43,17 +43,16 @@ const tabsAppender = (selector) => {
   
   const topicsFinder = axios.get(`https://lambda-times-api.herokuapp.com/topics`)
   .then((res)=> {
-    console.log(res.data.topics)
+    // console.log(res.data.topics)
     
    const result = res.data.topics
-   console.log(result)
+  //  console.log(result)
   
    const finalTabs = Tabs(result);
-   console.log(finalTabs)
+  //  console.log(finalTabs)
    
    const appendTopicsFinder = document.querySelector(selector)
    appendTopicsFinder.appendChild(finalTabs)
-
 
   })
   .catch((err)=> console.log(err))
